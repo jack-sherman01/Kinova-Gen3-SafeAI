@@ -1,0 +1,4 @@
+# kortex_api itself comes from Kinova's Artifactory wheel (see setup_env.sh), not PyPI.
+# kortex_api pins protobuf==3.5.1, which fails on Python >= 3.10; 3.20.3 works (pip warns, expected).
+protobuf==3.20.3
+pygame==2.6.1
