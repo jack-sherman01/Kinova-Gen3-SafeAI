@@ -134,6 +134,18 @@ The robot validates the trajectory before replay executes it.
 
 Admittance is always turned off when recording ends, including on Ctrl+C.
 
+## 7. Shutdown
+
+The Kortex API has no power-off command; use the power button.
+
+1. Quit any running script (ESC in teleop; let record/replay finish).
+2. Park the arm: in the Web App (http://192.168.1.10) run the built-in **Retract** action.
+3. Press and hold the power button on the robot base for a few seconds until it shuts down;
+   keep a hand near the arm while it powers down.
+4. Optional: `sudo ip addr del 192.168.1.11/24 dev enp131s0` and unplug the cable.
+
+Never cut power while the arm is raised or moving; the e-stop is for emergencies only.
+
 ## Safety
 
 - The arm must be secured to the table with a clear workspace; keep the e-stop within reach.
